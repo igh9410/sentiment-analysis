@@ -1,0 +1,8 @@
+# docker-compose.yml
+version: "3"
+services:
+  fastapi:
+    container_name: sentiment-analysis-server
+    ports:
+      - "8000:8000"
+    image: sentiment-analysis:v1
