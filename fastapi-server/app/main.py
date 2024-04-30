@@ -7,11 +7,13 @@ and includes it in the application using the include_router method.
 The main module also defines a root route 
 that returns a simple message when accessed.
 """
+
 from fastapi import FastAPI
+from app.sentiment.routes import sentiment_router
 
 
 app = FastAPI()
-# app.include_router(sentiment_router, prefix="/api/sentiment")
+app.include_router(sentiment_router, prefix="/api/sentiment")
 
 if __name__ == "__main__":
     import uvicorn

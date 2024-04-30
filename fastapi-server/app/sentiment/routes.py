@@ -3,11 +3,14 @@ from fastapi import APIRouter, HTTPException
 from app.sentiment.models import SentimentRequest, SentimentResponse
 from app.sentiment.crud import analyze_sentiment
 
-router = APIRouter()
+sentiment_router = APIRouter()
 
 
-@router.post("/", response_model=SentimentResponse)
+@sentiment_router.post("/", response_model=SentimentResponse)
 async def sentiment_analysis(request: SentimentRequest):
+    """
+    sentiment_analysis endpoint takes a SentimentRequest as input
+    """
     try:
         sentiment = analyze_sentiment(request.text)
         return SentimentResponse(sentiment=sentiment)

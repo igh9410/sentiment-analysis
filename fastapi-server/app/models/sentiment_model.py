@@ -25,4 +25,10 @@ class SentimentModel:
         )
         outputs = self.model(**inputs)
         predicted_class = outputs.logits.argmax().item()
-        return "positive" if predicted_class == 1 else "negative"
+
+        if predicted_class == 0:
+            return "negative"
+        elif predicted_class == 1:
+            return "neutral"
+        else:
+            return "positive"
