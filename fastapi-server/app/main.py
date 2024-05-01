@@ -1,10 +1,10 @@
 # main.py
 """
-The main module contains the FastAPI application instance 
-and the configuration for the application. 
-It imports the sentiment_router from the sentiment module 
-and includes it in the application using the include_router method. 
-The main module also defines a root route 
+The main module contains the FastAPI application instance
+and the configuration for the application.
+It imports the sentiment_router from the sentiment module
+and includes it in the application using the include_router method.
+The main module also defines a root route
 that returns a simple message when accessed.
 """
 
