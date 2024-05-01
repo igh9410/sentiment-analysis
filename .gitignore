@@ -19,3 +19,26 @@
 
 # Go workspace file
 go.work
+
+# Python bytecode
+*.py[cod]
+# Python cache
+pycache/
+*.pyc
+# Virtual environments
+.env
+.venv
+env/
+venv/
+# Editor directories and files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+# Other Python files
+*.egg-info/
+*.egg
+dist/
+build/
+
+.github/*
+terraform/*
